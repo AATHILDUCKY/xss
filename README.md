@@ -117,6 +117,16 @@ function unexploitableClass() {
 alert(1);
 ```
 
+# javascript function
+
+web pages have endpoints that accept as parameter the name of the function to execute. 
+common example to see in the wild is something like: **?callback=callbackFunc.**
+```
+callback=alert(1)
+```
+ validate the content to only allow **letters, numbers, dots and underscores**
+
+ 
 
 
 
